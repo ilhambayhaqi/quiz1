@@ -69,10 +69,20 @@
 	font-size: 20px;
 }
 
+.break-section{
+	display: block;
+	height: 100px;
+}
+
+.break-section-short{
+	display: block;
+	height: 50px;
+}
+
 .centered-title{
 	display: block;
 	width:  100%;
-	height: 150px;
+	height: 170px;
 
 	padding-top: 50px;
 	text-align: center;
@@ -97,7 +107,7 @@
 	color: white;
 	float: left;
 	display: inline-block;
-	margin: 30px 50px;
+	margin: 30px;
 	padding: 10px;
 }
 
@@ -138,11 +148,11 @@
 }
 
 .ml-col-3 {
-	width: calc((100% - 50px * 6) / 3);
+	width: calc((100% - 30px * 6) / 3);
 }
 
 .ml-col {
-	width: calc(100% - 100px);
+	width: calc(100% - 30px * 2);
 }
 
 .ml-regular {
@@ -208,11 +218,97 @@ footer {
 }
 
 
-@media only screen and (max-width: 1800px) {
-	.menu-list{
-		width: 40%;
-		margin: 30px 5%;
-	}
+.split {
+	position: relative;
+	display: block;
+	height: 500px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.split p{
+	font-size: 20px;
+}
+
+.front {
+	z-index: 1;
+}
+
+.back {
+	z-index: 0;
+}
+
+.split img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+	object-fit: cover;
+	width: 100%;
+	min-width: 100%;
+	min-height: 100%;
+
+	background-color: #ececec;
+}
+
+.split-full{
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	left: 0;
+
+	padding: 300px 20% 0px 20%;
+	text-align: center;
+	background-color: #ececec;
+}
+
+.split-full img{
+	filter: brightness(50%);
+}
+
+.split-left{
+	position: absolute;
+	display: block;
+	width: 50%;
+	height: 100%;
+	left: 0;
+
+	padding: 170px 50px;
+	text-align: right;
+	background-color: #ececec;
+}
+
+
+.split-right{
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 50%;
+	right: 0;
+
+	padding: 170px 50px;
+
+	text-align: left;
+	background-color: #ececec;
+}
+
+.color-1{
+	background-color: #022525;
+	color: white;
+}
+.color-2{
+	background-color: white;
+}
+.color-3{
+	background-color: teal;
+}
+.color-4{
+	background-color: transparent;
+	color: white;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -220,5 +316,42 @@ footer {
 		width: 70%;
 		margin: 30px 15%;
 	}
-}
 
+	.break-section{
+		height: 0px;
+	}
+
+	.split {
+		height: 700px;
+	}
+
+	.split-full{
+		padding-top: 45%;
+	}
+
+	.split-full img{
+		filter: brightness(100%);
+	}
+
+	.split-left{
+		width: 100%;
+		padding-top: 45%;
+		text-align: center;
+
+	}
+
+	.split-right{
+		width: 100%;
+		padding-top: 45%;
+		text-align: center;
+	}
+
+	.back {
+		filter: brightness(40%);
+	}
+
+	.front {
+		background-color: transparent;
+		color: white;
+	}
+}
