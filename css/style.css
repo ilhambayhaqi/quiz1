@@ -64,9 +64,14 @@
 	font-size: 72px;
 }
 
+.welcome-content h2 {
+	font-family: 'Sansita Swashed', cursive;
+	font-size: 36px;
+}
+
 .welcome-content p {
 	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 20px;
+	font-size: 28px;
 }
 
 .break-section{
@@ -173,6 +178,10 @@
 		linear-gradient(to bottom, purple, red),
 		linear-gradient(to left, purple, red),
 		linear-gradient(to left, skyblue, teal);
+
+	background-position: left top, left top, right bottom, right bottom, 5px, 5px;
+	background-size: 10px 50%, 50% 10px, 10px 50%, 50% 10px, calc(100% - 10px) calc(100% - 10px);
+	background-repeat: no-repeat;
 }
 
 .ml-reverse {
@@ -193,6 +202,10 @@
 		linear-gradient(to bottom, purple, red),
 		linear-gradient(to left, purple, red),
 		linear-gradient(to left, skyblue, teal);
+
+	background-position: left bottom, left bottom, right top, right top, 5px, 5px;
+	background-size: 10px 50%, 50% 10px, 10px 50%, 50% 10px, calc(100% - 10px) calc(100% - 10px);
+	background-repeat: no-repeat;
 }
 
 footer {
@@ -227,7 +240,7 @@ footer {
 }
 
 .split p{
-	font-size: 20px;
+	font-size: 24px;
 }
 
 .front {
@@ -318,6 +331,10 @@ footer {
 	}
 
 	.break-section{
+		height: 0px;
+	}
+
+	.break-section-short{
 		height: 0px;
 	}
 
